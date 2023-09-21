@@ -9,7 +9,7 @@ Before you begin, ensure you have the following prerequisites installed on your 
 - Node.js - Make sure to install [Node.js](https://nodejs.org/en), which includes npm (Node Package Manager)
 - TypeScript
 
-To install TypeScript globally in your local machine you can use the following command:
+> To install TypeScript globally in your local machine you can use the following command:
 
 ```
 npm install -g typescript
