@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: "./src/index.ts",
   output: {
     filename: "bundle.js",
@@ -10,7 +10,7 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
   },
-  devtool: "eval-source-map",
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -20,5 +20,10 @@ module.exports = {
         exclude: /node_modules/,
       },
     ],
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 };
