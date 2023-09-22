@@ -203,30 +203,35 @@
 // let user = "Jonas";
 // addID(user);
 
-// Enum Types
+// // Enum Types
 
-enum APIResponseType {
-  SUCCESS,
-  FAILED,
-  UNAUTHORIZED,
-  FORBIDDEN,
-}
+// enum APIResponseType {
+//   SUCCESS,
+//   FAILED,
+//   UNAUTHORIZED,
+//   FORBIDDEN,
+// }
 
-export interface APIResponse<T> {
-  status: number;
-  type: APIResponseType;
-  data: T;
-}
+// export interface APIResponse<T> {
+//   status: number;
+//   type: APIResponseType;
+//   data: T;
+// }
 
-const response1: APIResponse<object> = {
-  status: 200,
-  type: APIResponseType.SUCCESS,
-  data: {
-    name: "Jonas",
-    age: 20,
-    country: "Luxembourg",
-    city: "Diekirch",
-  },
-};
+// const response1: APIResponse<object> = {
+//   status: 200,
+//   type: APIResponseType.SUCCESS,
+//   data: {
+//     name: "Jonas",
+//     age: 20,
+//     country: "Luxembourg",
+//     city: "Diekirch",
+//   },
+// };
 
-console.log(response1);
+// console.log(response1);
+
+// Tuples
+let ourTuple: [number, boolean, string];
+
+ourTuple = [5, false, "Coding God was here"];
