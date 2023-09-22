@@ -113,17 +113,17 @@
 
 // // Classes
 
-import { Person } from "./Classes/Person";
-import { IsPerson } from "./Interfaces/IsPerson";
+// import { Person } from "./Classes/Person";
+// import { IsPerson } from "./Interfaces/IsPerson";
 
-const person1 = new Person("John", 20, "Luxembourg");
-const person2 = new Person("John", 21, "Portugal");
-const person3 = new Person("Jonas", 20, "Denmark");
-let person4 = new Person("Jonas", 20, "Belgium");
+// const person1 = new Person("John", 20, "Luxembourg");
+// const person2 = new Person("John", 21, "Portugal");
+// const person3 = new Person("Jonas", 20, "Denmark");
+// let person4 = new Person("Jonas", 20, "Belgium");
 
-const persons: Person[] = [person1, person2, person3, person4];
+// const persons: Person[] = [person1, person2, person3, person4];
 
-console.log(persons);
+// console.log(persons);
 
 // const person: any = {};
 // console.log(person.speak());
@@ -175,3 +175,15 @@ console.log(persons);
 // const threeDRectangle = { width: 20, length: 10, height: 10 };
 
 // console.log(drawRectangle(threeDRectangle));
+
+// Generics
+
+const addID = <T>(obj: T) => {
+  let id = Math.floor(Math.random() * 100);
+  return { ...obj, id };
+};
+
+let user = addID({
+  name: "Jonas",
+  age: 20,
+});
