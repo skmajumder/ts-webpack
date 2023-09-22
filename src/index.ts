@@ -113,30 +113,31 @@
 
 // // Classes
 
-// import { Person } from "./Classes/Person";
+import { Person } from "./Classes/Person";
+import { IsPerson } from "./Interfaces/IsPerson";
 
-// const person1 = new Person("John", 20, "Luxembourg");
-// const person2 = new Person("John", 21, "Portugal");
-// const person3 = new Person("Jonas", 20, "Denmark");
-// const person4 = new Person("Jonas", 20, "Belgium");
+const person1 = new Person("John", 20, "Luxembourg");
+const person2 = new Person("John", 21, "Portugal");
+const person3 = new Person("Jonas", 20, "Denmark");
+let person4 = new Person("Jonas", 20, "Belgium");
 
-// const persons: Person[] = [person1, person2, person3, person4];
+const persons: Person[] = [person1, person2, person3, person4];
 
-// console.log(persons);
+console.log(persons);
 
 // const person: any = {};
 // console.log(person.speak());
 
 // Interfaces
 
-interface areaOfRectangle {
-  width: number;
-  length: number;
-}
+// interface areaOfRectangle {
+//   width: number;
+//   length: number;
+// }
 
-interface colorOfRectangle extends areaOfRectangle {
-  color: string;
-}
+// interface colorOfRectangle extends areaOfRectangle {
+//   color: string;
+// }
 
 // function drawRectangle(rectangle: colorOfRectangle): object {
 //   const area = rectangle.width * rectangle.length;
@@ -164,13 +165,13 @@ interface colorOfRectangle extends areaOfRectangle {
 
 // console.log(colorRectangle);
 
-function drawRectangle(option: areaOfRectangle): number {
-  const width = option.width;
-  const length = option.length;
+// function drawRectangle(option: areaOfRectangle): number {
+//   const width = option.width;
+//   const length = option.length;
 
-  return width * length;
-}
+//   return width * length;
+// }
 
-const threeDRectangle = { width: 20, length: 10, height: 10 };
+// const threeDRectangle = { width: 20, length: 10, height: 10 };
 
-console.log(drawRectangle(threeDRectangle));
+// console.log(drawRectangle(threeDRectangle));

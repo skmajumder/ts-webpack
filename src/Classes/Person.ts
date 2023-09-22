@@ -1,11 +1,17 @@
-export class Person {
+import { IsPerson } from "./../Interfaces/IsPerson";
+
+export class Person implements IsPerson {
   public constructor(
     private name: string,
-    private age: number,
-    private country: string
+    public age: number,
+    public country: string
   ) {}
 
+  getName() {
+    return this.name;
+  }
+
   public greeting(): string {
-    return `Greeting ${this.name}`
+    return `Greeting ${this.getName()}`;
   }
 }
