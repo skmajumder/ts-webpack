@@ -203,11 +203,24 @@
 // let user = "Jonas";
 // addID(user);
 
-import { APIResponse } from "./Interfaces/APIResponse";
+// Enum Types
+
+enum APIResponseType {
+  SUCCESS,
+  FAILED,
+  UNAUTHORIZED,
+  FORBIDDEN,
+}
+
+export interface APIResponse<T> {
+  status: number;
+  type: APIResponseType;
+  data: T;
+}
 
 const response1: APIResponse<object> = {
   status: 200,
-  type: "application/json",
+  type: APIResponseType.SUCCESS,
   data: {
     name: "Jonas",
     age: 20,
@@ -215,3 +228,5 @@ const response1: APIResponse<object> = {
     city: "Diekirch",
   },
 };
+
+console.log(response1);
