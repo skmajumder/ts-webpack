@@ -178,7 +178,15 @@
 
 // Generics
 
-const addID = <T>(obj: T) => {
+const addID = <
+  T extends {
+    name: string;
+    age: number;
+    country: string;
+  }
+>(
+  obj: T
+) => {
   let id = Math.floor(Math.random() * 100);
   return { ...obj, id };
 };
@@ -186,4 +194,9 @@ const addID = <T>(obj: T) => {
 let user = addID({
   name: "Jonas",
   age: 20,
+  country: "Luxembourg",
+  city: "Diekirch",
 });
+
+// let user = "Jonas";
+// addID(user);
