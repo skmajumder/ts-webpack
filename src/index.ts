@@ -178,25 +178,40 @@
 
 // Generics
 
-const addID = <
-  T extends {
-    name: string;
-    age: number;
-    country: string;
-  }
->(
-  obj: T
-) => {
-  let id = Math.floor(Math.random() * 100);
-  return { ...obj, id };
-};
+// const addID = <
+//   T extends {
+//     name: string;
+//     age: number;
+//     country: string;
+//   }
+// >(
+//   obj: T
+// ) => {
+//   let id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
 
-let user = addID({
-  name: "Jonas",
-  age: 20,
-  country: "Luxembourg",
-  city: "Diekirch",
-});
+// let user = addID({
+//   name: "Jonas",
+//   age: 20,
+//   country: "Luxembourg",
+//   city: "Diekirch",
+// });
+
+// console.log(user);
 
 // let user = "Jonas";
 // addID(user);
+
+import { APIResponse } from "./Interfaces/APIResponse";
+
+const response1: APIResponse<object> = {
+  status: 200,
+  type: "application/json",
+  data: {
+    name: "Jonas",
+    age: 20,
+    country: "Luxembourg",
+    city: "Diekirch",
+  },
+};
